@@ -23,9 +23,6 @@ svg.test3 {
 
 <script type="text/javascript">
 function init() {
-
-
-
     function r2() {
         return d3.radialLine().curve(d3.curveCardinalClosed).angle(function(a) {
             return a;
@@ -131,67 +128,6 @@ function init() {
     }, 1500);
 
 };
-            
-            return i% 3 === 0? 100:  100 + Math.random() *  x;
-        })(d3.range(0, 2* Math.PI, Math.PI / 200));        
-    };
-    
-    var svg3 = d3.select("svg.test3");
-    
-    var defs = svg3.append("defs");
-    
-    defs.append("filter").attr("id", "blur").append("feGaussianBlur").attr("in", "sourceGraphic").attr("stdDeviation", "1");
-    
-    var gra = defs.append("radialGradient").attr("id", "radGradient");
-    gra.append("stop").attr("offset", "10%").attr("stop-color", "#FE4110");
-    gra.append("stop").attr("offset", "50%").attr("stop-color", "#FE8710");
-    gra.append("stop").attr("offset", "70%").attr("stop-color", "#FEB610");
-    gra.append("stop").attr("offset", "90%").attr("stop-color", "yellow");
-    gra.append("stop").attr("offset", "95%").attr("stop-color", "#fff");
-    
-    var path2 = svg3.append("g").attr("transform", "translate(200,200)").append("path").attr("d", function(d,i) {
-			return r2();
-    }).attr("fill", "url(#radGradient)").attr("filter", "url(#blur)");
-    
-    var path3 = svg3.append("g").attr("transform", "translate(600,200)").append("path").attr("d", function(d,i) {
-		return r3();
-}).attr("fill", "url(#radGradient)").attr("filter", "url(#blur)");
-    
-    var path4 = svg3.append("g").attr("transform", "translate(200,600)").append("path").attr("class", "path3").attr("d", function(d,i) {
-		return r4();
-}).attr("fill", "url(#radGradient)").attr("filter", "url(#blur)");
-    
-    var path5 = svg3.append("g").attr("transform", "translate(600,600)").append("path").attr("d", function(d,i) {
-		return r5();
-}).attr("fill", "url(#radGradient)").attr("filter", "url(#blur)");
-    
-    var path6 = svg3.append("g").attr("transform", "translate(1100,600)").append("path").attr("d", function(d,i) {
-		return r6();
-}).attr("fill", "url(#radGradient)").attr("filter", "url(#blur)");
-    
-    d3.interval(function() {
-        path2.transition().duration(1500).ease(d3.easeLinear).attr("d", function(d) {
-            return r2();
-        });
-        
-        path3.transition().duration(1500).ease(d3.easeLinear).attr("d", function(d) {
-            return r3();
-        });
-        
-        path4.transition().duration(1500).ease(d3.easeLinear).attr("d", function(d) {
-            return r4();
-        });
-        
-        path5.transition().duration(1500).ease(d3.easeLinear).attr("d", function(d) {
-            return r5();
-        });
-        
-        path6.transition().duration(1500).ease(d3.easeLinear).attr("d", function(d) {
-            return r6();
-        });
-    },1500);
-    
-    };
 </script>
 
 <style type="text/css">
