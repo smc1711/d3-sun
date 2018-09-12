@@ -4,4 +4,4 @@ Sunshine animation in d3
 
 Code for d3.radialLine used from https://bl.ocks.org/mbostock/2d466ec3417722e3568cd83fc35338e3
 
-<h4><a href="https://smc1711.github.io/d3-sun/sunTest.html">Preview</a><h4>
+<h4><a target="_blank" href="https://smc1711.github.io/d3sun/sunTest.html">Preview</a><h4>
