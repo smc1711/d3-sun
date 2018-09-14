@@ -145,7 +145,7 @@ setTimeout(function() {
 
    var script = document.createElement("script");
    script.type = 'application/ld+json';
-   script.text = jsonld.stringify(jsonld);
+   script.text = JSON.stringify(jsonld);
    
 document.querySelector("head").appendChild(script);
 
