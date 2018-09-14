@@ -129,30 +129,6 @@ function init() {
 
 };
 </script>
-
-	
-<script>
-setTimeout(function() {
-   var jsonld = {
-     "@context": "http://schema.org/",
-     "@type": "Dataset",
-     "name": "test dataset",
-     "description": "Testing if timeout works to capture json ld markup",
-     "url": "https://smc1711.github.io/d3sun/sunTest.html",
-     "sameAs":  "https://smc1711.github.io/d3sun/sunTest.html",
-     "keywords": ["dataset", "test"],
-   }
-
-   var script = document.createElement("script");
-   script.type = 'application/ld+json';
-   script.text = JSON.stringify(jsonld);
-   
-document.querySelector("head").appendChild(script);
-
-},1000);
-
-</script>
-	
 	
 <style type="text/css">
 html, body {
